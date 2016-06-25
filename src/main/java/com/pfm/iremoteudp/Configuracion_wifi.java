@@ -26,7 +26,7 @@ public class Configuracion_wifi extends AppCompatActivity
 	EditText ipaccesspoint;
     EditText port_station_remote;
 	EditText port_station_local;
-	CheckBox checkboxlocal,checkboxremoto;
+	//CheckBox checkboxlocal,checkboxremoto;
 	
 	
 
@@ -53,8 +53,8 @@ public class Configuracion_wifi extends AppCompatActivity
 		{
 			editor.putString("ip_accesspoint", ipaccesspoint.getText().toString());
 		}
-		editor.putBoolean("checkbox_local", checkboxlocal.isChecked());
-		editor.putBoolean("checkbox_remote", checkboxremoto.isChecked());
+		
+		
 		editor.commit();
 		Toast.makeText(getApplicationContext(), "Guardando", Toast.LENGTH_SHORT).show();
 		super.onDestroy();
@@ -82,9 +82,6 @@ public class Configuracion_wifi extends AppCompatActivity
 		{
 			editor.putString("ip_accesspoint", ipaccesspoint.getText().toString());
 		}
-		editor.putBoolean("checkbox_local", checkboxlocal.isChecked());
-		editor.putBoolean("checkbox_remote", checkboxremoto.isChecked());
-
 		editor.commit();
 		// TODO: Implement this method
 		super.onPause();
@@ -109,11 +106,7 @@ public class Configuracion_wifi extends AppCompatActivity
 		port_station_remote = (EditText)findViewById(R.id.port_station_remote);
 		port_station_local = (EditText)findViewById(R.id.port_station_local);
 		ipaccesspoint  = (EditText)findViewById(R.id.dirip2);
-		checkboxlocal = (CheckBox)findViewById(R.id.checkbox_local);
-		checkboxremoto = (CheckBox)findViewById(R.id.checkbox_remote);
-		checkboxlocal.setOnClickListener(mylistener);
-		checkboxremoto.setOnClickListener(mylistener);
-
+		
 
 		SharedPreferences settings = getSharedPreferences("IPs", MODE_PRIVATE);
 		String nombre = settings.getString("ip_station", "192.168.80.6");
@@ -124,17 +117,7 @@ public class Configuracion_wifi extends AppCompatActivity
         port_station_remote.setText(nombre);
 		nombre = settings.getString("ip_accesspoint", "192.168.1.4");
         ipaccesspoint.setText(nombre);
-        Boolean check=settings.getBoolean("checkbox_local", true);
-		checkboxlocal.setChecked(check);
-		check = settings.getBoolean("checkbox_remote", true);
-		checkboxremoto.setChecked(check);
-		port_station_local.setEnabled(checkboxlocal.isChecked());
-		port_station_local.setFocusable(checkboxlocal.isChecked());	
-		port_station_local.setFocusableInTouchMode(checkboxlocal.isChecked());
-		port_station_remote.setEnabled(checkboxremoto.isChecked());
-		port_station_remote.setFocusable(checkboxremoto.isChecked());
-		port_station_remote.setFocusableInTouchMode(checkboxremoto.isChecked());
-
+        
 		
 
 
@@ -262,54 +245,7 @@ public class Configuracion_wifi extends AppCompatActivity
 
 
 	}
-	private View.OnClickListener mylistener = new View.OnClickListener() {
-        public void onClick(View v)
-		{
-
-			boolean checked = ((CheckBox) v).isChecked();
-
-			switch (v.getId())
-			{
-				case R.id.checkbox_local:
-
-					if (checked)
-					{
-						port_station_local.setFocusable(true);
-						port_station_local.setFocusableInTouchMode(true);
-						port_station_local.setEnabled(true);	
-
-					}
-
-					else
-					{
-						port_station_local.setFocusable(false);
-						port_station_local.setFocusableInTouchMode(false);
-						port_station_local.setEnabled(false);
-					}
-
-					break;
-				case R.id.checkbox_remote:
-					if (checked)
-					{
-						port_station_remote.setFocusable(true);
-						port_station_remote.setFocusableInTouchMode(true);
-						port_station_remote.setEnabled(true);	
-					}
-
-					else
-					{
-						port_station_remote.setFocusable(false);
-						port_station_remote.setFocusableInTouchMode(false);
-						port_station_remote.setEnabled(false);
-
-					}
-
-					break;
-				default:
-					break;
-			}
-		}
-	};
+	
 
 	
 
