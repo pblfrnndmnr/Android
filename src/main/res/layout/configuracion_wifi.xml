@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools" 
+	android:layout_width="match_parent" 
+	android:layout_height="match_parent" 
+	android:baselineAligned="false"
+	android:orientation="vertical" 
+	tools:context=".Configuracion_wifi">
+
+	<LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:baselineAligned="false" 
+		android:orientation="horizontal"
+		android:focusableInTouchMode="true" 
+		android:elevation="5dp"
+		android:descendantFocusability="beforeDescendants">
+
+		<android.support.design.widget.TextInputLayout 
+			android:id="@+id/input_layout_name"
+			android:layout_weight=".5"
+			android:layout_width="0dp" 
+			android:layout_height="wrap_content">
+
+			<EditText 
+				android:id="@+id/dirip"
+				android:nextFocusDown="@+id/dirip2"
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content" 
+				android:ems="7"
+				android:gravity="center_horizontal"
+				android:layout_gravity="left"
+				android:layout_margin="5dp" 
+				android:hint="IP Station" 
+				android:selectAllOnFocus="true" 
+				android:digits="01234567890." 
+				android:maxLength="15"
+				android:inputType="number|numberDecimal" 
+				android:singleLine="true"/>
+		</android.support.design.widget.TextInputLayout>
+
+		<android.support.design.widget.TextInputLayout 
+			android:id="@+id/input_layout_name2"
+			android:layout_weight=".5" 
+			android:layout_width="0dp" 
+			android:layout_height="wrap_content">
+
+			<EditText
+				android:id="@+id/dirip2" 
+				android:nextFocusDown="@+id/port_station_local"
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:ems="7"
+				android:gravity="center_horizontal"
+				android:layout_gravity="right" 
+				android:layout_margin="5dp" 
+				android:hint="IP Access Point"
+				android:selectAllOnFocus="true" 
+				android:digits="01234567890."
+				android:maxLength="15"
+				android:inputType="number|numberDecimal"
+				android:singleLine="true"/>
+		</android.support.design.widget.TextInputLayout>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:baselineAligned="false" 
+		android:orientation="horizontal">
+
+		<android.support.design.widget.TextInputLayout
+			android:id="@+id/input_layout_name_port_station_local" 
+			android:layout_weight=".25" 
+			android:layout_width="0dp" 
+			android:layout_height="wrap_content">
+
+			<EditText 
+				android:id="@+id/port_station_local"
+				android:nextFocusDown="@+id/port_station_remote"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" 
+				android:minEms="3"
+				android:gravity="center_horizontal" 
+				android:layout_gravity="left" 
+				android:layout_margin="5dp" 
+				android:hint="Puerto Local" 
+				android:selectAllOnFocus="true" 
+				android:digits="0123456789"
+				android:maxLength="5"
+				android:inputType="number" 
+				android:singleLine="true"/>
+		</android.support.design.widget.TextInputLayout>
+
+		<CheckBox 
+			android:id="@+id/checkbox_local" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_margin="5dp" 
+			android:layout_gravity="bottom"/>
+
+		<android.support.design.widget.TextInputLayout 
+			android:id="@+id/input_layout_name_port_station_remote" 
+			android:layout_weight=".25" 
+			android:layout_width="0dp" 
+			android:layout_height="wrap_content">
+
+			<EditText 
+				android:id="@+id/port_station_remote" 
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:layout_weight=".25"
+				android:minEms="3" 
+				android:gravity="center_horizontal"
+				android:layout_gravity="right"
+				android:layout_margin="5dp"
+				android:hint="Puerto Remoto" 
+				android:selectAllOnFocus="true"
+				android:digits="0123456789"
+				android:maxLength="5" 
+				android:inputType="number"
+				android:singleLine="true"/>
+		</android.support.design.widget.TextInputLayout>
+
+		<CheckBox
+			android:id="@+id/checkbox_remote" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_margin="5dp"
+			android:layout_gravity="bottom"/>
+	</LinearLayout>
+
+	
+
+	
+
+	
+
+	
+
+	
+</LinearLayout>

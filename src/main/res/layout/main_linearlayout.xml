@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:baselineAligned="true"
+		android:orientation="vertical" 
+		tools:context=".IrRemoteControlUDP">
+
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="true"
+			android:orientation="horizontal"
+			android:layout_weight="1">
+
+			<TextView
+				android:id="@+id/texttitulo"
+				android:layout_alignParentTop="true"
+				android:layout_centerInParent="true"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_weight="3"
+				android:layout_margin="5dp"
+				android:text="Control Remoto UDP"
+				android:textSize="15sp"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				 />
+
+			<TextView
+				android:id="@+id/textViewultimocomando"
+				android:layout_toRightOf="@id/texttitulo"
+				android:layout_margin="5dp"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+
+				android:layout_weight="1"
+				android:textSize="15sp"
+				android:text=""
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+		</LinearLayout>
+
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="true"
+			android:orientation="horizontal" 
+			android:layout_weight="1">
+
+			<Button
+				android:id="@+id/buttonmute"
+				android:background="@drawable/boton_pulsado"
+				android:textSize="15sp" 
+				android:layout_weight="1"
+				android:layout_width="0dp"
+				android:layout_alignParentLeft="true"
+				android:layout_height="match_parent"
+
+				android:layout_margin="5dp"
+				android:layout_below="@id/texttitulo"
+
+				android:text="Mute"
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/buttonpower"
+				android:background="@drawable/boton_pulsado"
+				android:layout_alignParentRight="true"
+				android:textSize="15sp" 
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="match_parent"
+
+				android:layout_below="@id/texttitulo"
+				android:layout_margin="5dp"
+
+				android:text="On"
+				android:textStyle="bold"
+			/>
+		</LinearLayout>
+
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="false"
+			android:orientation="horizontal" 
+			android:layout_weight="0.2">
+		</LinearLayout>
+
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="false"
+			android:orientation="horizontal" 
+			android:layout_weight="1">
+
+			<Button
+				android:id="@+id/button1"
+				android:background="@drawable/boton_pulsado"
+				android:textSize="15sp" 
+				android:layout_below="@id/buttonmute"
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				android:layout_margin="5dp"
+				android:text="1"
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/button2"
+				android:background="@drawable/boton_pulsado"
+				android:textSize="15sp" 
+				android:layout_below="@id/buttonmute"
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				android:layout_margin="5dp"
+				android:text="2"
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/button3"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/buttonmute"
+				android:layout_alignParentRight="true"
+				android:textSize="15sp" 
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="3" 
+				android:textStyle="bold"
+			/>
+		</LinearLayout>
+
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="true"
+			android:orientation="horizontal"
+			android:layout_weight="1">
+			<Button
+				android:id="@+id/button4"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/button1"
+				android:layout_alignParentLeft="true"
+				android:textSize="15sp" 
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="4"
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/button5"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/button1"
+				android:layout_centerInParent="true"
+				android:textSize="15sp" 
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="5"
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/button6"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/button1"
+				android:layout_alignParentRight="true"
+				android:textSize="15sp" 
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="6" 
+				android:textStyle="bold"
+			/> 
+		</LinearLayout>
+
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="true"
+			android:orientation="horizontal" 
+			android:layout_weight="1">
+
+			<Button
+				android:id="@+id/button7"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/button4"
+				android:layout_alignParentLeft="true"
+				android:textSize="15sp" 
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="7"
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/button8"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/button4"
+				android:layout_centerInParent="true"
+				android:textSize="15sp" 
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="8"
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/button9"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/button4"
+				android:layout_alignParentRight="true"
+				android:textSize="15sp" 
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="9" 
+				android:textStyle="bold"
+			/>
+		</LinearLayout>
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="true"
+			android:orientation="horizontal" 
+			android:layout_weight="1">
+
+			<Button
+				android:id="@+id/button100"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/button7"
+				android:layout_alignParentLeft="true"
+				android:textSize="15sp" 
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="100" 
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/button0"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/button7"
+				android:layout_centerInParent="true"
+				android:textSize="15sp" 
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="0"
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/buttontvvideo"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/button7"
+				android:layout_alignParentRight="true"
+				android:textSize="15sp" 
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="Tv/Video"
+				android:textStyle="bold"
+			/>
+		</LinearLayout>
+
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="true"
+			android:orientation="horizontal" 
+			android:layout_weight="1">
+
+			<Button
+				android:id="@+id/buttoncanalanterior"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/button100"
+				android:layout_alignParentLeft="true"
+				android:textSize="15sp" 
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="Ret."
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/buttondisplay"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/button100"
+				android:layout_centerInParent="true"
+				android:textSize="15sp" 
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="Info" 
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/buttontimer"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/button100"
+				android:layout_alignParentRight="true"
+				android:textSize="15sp" 
+				android:layout_width="wrap_content"
+				android:layout_weight="1"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="Sleep"
+				android:textStyle="bold"
+			/>
+
+		</LinearLayout>
+		
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="false"
+			android:orientation="horizontal" 
+			android:layout_weight="0.2">
+		</LinearLayout>
+		
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="false"
+			android:orientation="horizontal"
+			android:layout_weight="1">
+
+			<LinearLayout	
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:baselineAligned="false"
+				android:layout_weight="2.5"
+				android:orientation="horizontal" >
+			</LinearLayout>
+
+			<Button
+				android:id="@+id/buttoncanalup"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/buttoncanalanterior"
+				android:layout_centerInParent="true"
+				android:textSize="15sp" 
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:layout_weight="3"
+				android:text="Ch+" 
+				android:textStyle="bold"
+			/>
+
+			<LinearLayout	
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:baselineAligned="false"
+				android:layout_weight="2.5"
+				android:orientation="horizontal" >
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="false"
+			android:orientation="horizontal"
+			android:layout_weight="1">
+
+			<Button
+				android:id="@+id/buttonvolmenos"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/buttoncanalup"
+				android:layout_alignParentLeft="true"
+				android:textSize="15sp" 
+				android:layout_width="0dp"
+				android:layout_weight="3"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="Vol-" 
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/buttonmenu"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/buttoncanalup"
+				android:layout_centerInParent="true"
+				android:textSize="15sp" 
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:layout_weight="2"
+				android:text="Menu" 
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/buttonvolmas"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/buttoncanalup"
+				android:layout_alignParentRight="true"
+				android:textSize="15sp" 
+				android:layout_width="0dp"
+				android:layout_weight="3"
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:text="Vol+" 
+				android:textStyle="bold"
+			/>
+		</LinearLayout>
+
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="false"
+			android:orientation="horizontal" 
+			android:layout_weight="1">
+
+			<LinearLayout	
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:baselineAligned="false"
+				android:layout_weight="2.5"
+				android:orientation="horizontal" >
+			</LinearLayout>
+
+			<Button
+				android:id="@+id/buttoncanaldown"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/buttonvolmenos"
+				android:layout_centerInParent="true"
+				android:textSize="15sp" 
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:layout_weight="3"
+				android:text="Ch-" 
+				android:textStyle="bold"
+			/>
+
+			<LinearLayout	
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:baselineAligned="false"
+				android:layout_weight="2.5"
+				android:orientation="horizontal" >
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="false"
+			android:orientation="horizontal" 
+			android:layout_weight="0.2">
+		</LinearLayout>
+		
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="false"
+			android:orientation="horizontal"
+			android:layout_weight="1">
+
+			<Button
+				android:id="@+id/buttonimagen"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/buttoncanaldown"
+				android:layout_alignParentLeft="true"
+				android:textSize="15sp" 
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:text="Image"
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/buttonmemoria"
+				android:background="@drawable/boton_pulsado"
+				android:layout_alignParentLeft="true"
+				android:textSize="15sp" 
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:text="Memory"
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/buttonfuzzy"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/buttoncanaldown"
+				android:layout_alignParentRight="true"
+				android:textSize="15sp" 
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:text="Fuzzy"
+				android:textStyle="bold"
+			/>
+		</LinearLayout>
+
+		<LinearLayout	
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:baselineAligned="false"
+			android:orientation="horizontal" 
+			android:layout_weight="1">
+
+			<Button
+				android:id="@+id/buttonautoscan"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/buttonimagen"
+				android:layout_centerInParent="true"
+				android:textSize="15sp" 
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:text="Autoscan" 
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/buttonaudio"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/buttonimagen"
+				android:layout_alignParentRight="true"
+				android:textSize="15sp" 
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:text="Audio"
+				android:textStyle="bold"
+			/>
+
+			<Button
+				android:id="@+id/buttontvcatv"
+				android:background="@drawable/boton_pulsado"
+				android:layout_below="@id/buttonmemoria"
+				android:layout_alignParentLeft="true"
+				android:textSize="15sp" 
+				android:layout_margin="5dp"
+				android:layout_height="wrap_content"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:text="Tv/Catv"
+				android:textStyle="bold"
+			/>
+		</LinearLayout>
+	</LinearLayout>
+

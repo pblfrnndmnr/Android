@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Array con los valores de los comandos-->
+    <string-array name="comandos_control">
+		<item>KEY_POWER</item>  
+		<item>KEY_OK</item>  
+		<item >KEY_FORWARD"</item>  
+		<item>REV </item>
+		<item>KEY_PLAY</item>
+		<item>KEY_STOP</item>
+		<item>KEY_VOLUMEUP</item>
+		<item>KEY_VOLUMEDOWN</item>
+		<item>KEY_CHANNELUP</item>
+		<item>KEY_CHANNELDOWN</item>
+		<item>KEY_1</item>
+		<item>KEY_2</item>
+		<item>KEY_3</item>
+		<item>KEY_4</item>
+		<item>KEY_5</item>
+		<item>KEY_6</item>
+		<item>KEY_7</item>
+		<item>KEY_8</item>
+		<item>KEY_9</item>
+		<item>KEY_0</item>
+		<item>KEY_HELP</item>
+		<item>CH</item>
+		<item>KEY_MENU</item>
+		<item>PSCAN100HZ</item>
+		<item>KEY_X</item>
+		<item>KEY_MUTE</item>
+		<item>KEY_9</item>
+		<item>AV</item>
+		</string-array>
+</resources>
+<!--
+
+         CH                       0x000000000AF5C837
+KEY_MENU                 0x000000000AF502FD        #  Was: MENU
+PSCAN100HZ               0x000000000AF5B24D
+KEY_X                    0x000000000AF52AD5        #  Was: X
+KEY_MUTE                 0x000000000AF5D02F        #  Was: MUTE
+KEY_9                    0x000000000AF5FA05        #  Was: 16:9
+AV                       0x000000000AF5906F
+-->

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, ChatServerActivity!</string>
+    <string name="app_name">IR Remote Control UDP</string>
+	<string name="app_name1">Configuración Wifi</string>
+	<string name="app_name2">Configuración IR</string>
+	<string name="menu_settings">Configuración Wifi</string>
+	<string name="menu_settings2">Configuración IR</string>
+	<string name="menu_archivo">Muestra Archivo</string>
+	<string name="press_once_again_to_exit">Pulse de nuevo para salir.</string>
+
+
+		
+		<string name="boton_prompt">Elija un botón</string>
+		<string name="comando_prompt">Elija un comando</string>
+		
+	
+</resources>

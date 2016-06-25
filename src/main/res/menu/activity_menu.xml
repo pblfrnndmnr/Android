@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_settings"
+        android:title="@string/menu_settings"
+        android:titleCondensed="Conf. Wifi"
+		android:orderInCategory="0"
+        android:showAsAction="never" />
+	<item android:id="@+id/menu_settings2"
+        android:title="@string/menu_settings2"
+        android:titleCondensed="Conf. IR"
+		android:orderInCategory="0"
+        android:showAsAction="never" />
+	
+	<item android:id="@+id/menu_muestraarchivo"
+        android:title="Archivo"
+        android:titleCondensed="Arch."
+		android:orderInCategory="0"
+        android:showAsAction="never" />
+	
+	<item android:id="@+id/menu_about"
+        android:title="Acerca de"
+        android:titleCondensed="A.de"
+		android:orderInCategory="1"
+        android:showAsAction="never" />
+	<item android:id="@+id/menu_salir"
+        android:title="Salir"
+        android:titleCondensed="Sal"
+		android:orderInCategory="100"
+        android:showAsAction="never" />
+</menu>
