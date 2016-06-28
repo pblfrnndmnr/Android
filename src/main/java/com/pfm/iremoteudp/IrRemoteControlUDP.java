@@ -1,24 +1,5 @@
 /*****************************************************************************
- *  Copyright (c) 2004-2008, 2013 Digi International Inc., All Rights Reserved
- *
- *  This software contains proprietary and confidential information of Digi
- *  International Inc.  By accepting transfer of this copy, Recipient agrees
- *  to retain this software in confidence, to prevent disclosure to others,
- *  and to make no use of this software other than that for which it was
- *   delivered.  This is an unpublished copyrighted work of Digi International
- *  Inc.  Except as permitted by federal law, 17 USC 117, copying is strictly
- *  prohibited.
- *
- *  Restricted Rights Legend
- *
- *  Use, duplication, or disclosure by the Government is subject to
- *  restrictions set forth in sub-paragraph (c)(1)(ii) of The Rights in
- *  Technical Data and Computer Software clause at DFARS 252.227-7031 or
- *  subparagraphs (c)(1) and (2) of the Commercial Computer Software -
- *  Restricted Rights at 48 CFR 52.227-19, as applicable.
- *
- *  Digi International Inc. 11001 Bren Road East, Minnetonka, MN 55343
- *
+ PFM 2016
  *****************************************************************************/
 package com.pfm.iremoteudp;
 
@@ -35,13 +16,10 @@ import org.apache.commons.logging.*;
 import java.util.*;
 import android.support.v7.app.*;
 
-
 public class IrRemoteControlUDP extends ActionBarActivity
 {
-	
-	
+
 	TextView txt1;
-	//String modifiedSentence;
 	Button btmute,btpower,bt1,bt2,bt3,bt4,
 	bt5,bt6,bt7,bt8,bt9,bt0,bt100,bttvvideo,
 	btcanalanterior,btinfo,bttimer,btcanalup,
@@ -53,7 +31,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
 	private long mLastPress = 0;	// Cuándo se pulsó atrás por última vez
     private long mTimeLimit = 2000;	// Límite de tiempo entre pulsaciones, en ms
 
-	// @Override
+	@Override
     public void onBackPressed()
 	{
         Toast onBackPressedToast = Toast.makeText(this, R.string.press_once_again_to_exit, Toast.LENGTH_SHORT);
@@ -68,6 +46,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
             onBackPressedToast.cancel();
             super.onBackPressed();
         }}
+
 	//Manejo de archivo de texto
 	public void grabar(View v)
 	{
@@ -267,20 +246,16 @@ public class IrRemoteControlUDP extends ActionBarActivity
 			case R.id.menu_settings:
 				//Crear un nuevo intent
 				Intent intent = new Intent(IrRemoteControlUDP.this, Configuracion_wifi.class);
-				//Iniciar actividad
-				//intent.putStringArrayListExtra("botonespasados",ArrayList);
-				//intent.putExtra("parametro","textopasado");
 				startActivity(intent);
 				return true;
 			case R.id.menu_settings2:
 				//Crear un nuevo intent
 				Intent intent2 = new Intent(IrRemoteControlUDP.this, Configuracion_ir.class);
 				//Iniciar actividad
-				intent2.putStringArrayListExtra("botonespasados",ArrayList);
-				//intent.putExtra("parametro","textopasado");
+				intent2.putStringArrayListExtra("botonespasados", ArrayList);
 				startActivity(intent2);
 				return true;
-				
+
 			case R.id.menu_muestraarchivo:
 				//Crear un nuevo intent
 				Intent intenta = new Intent(IrRemoteControlUDP.this, muestra_archivo.class);
@@ -293,8 +268,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
 				return true;
 
 			case R.id.menu_salir:
-				//Log.e("loco", "loco");
-				finish();
+	    		finish();
 				Intent intent1 = new Intent(Intent.ACTION_MAIN);
 				intent1.addCategory(Intent.CATEGORY_HOME);
 				intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -311,7 +285,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
 	@Override
     public void onCreate(Bundle savedInstanceState)
 	{
-        //Log.e("loco", "loco");
+
 		super.onCreate(savedInstanceState);
 		//requestWindowFeature(Window.FEATURE_ACTION_BAR);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
@@ -319,21 +293,21 @@ public class IrRemoteControlUDP extends ActionBarActivity
 
 
         setContentView(R.layout.main_linearlayout);
-       
+
 		SharedPreferences settings = getSharedPreferences("IPs", MODE_PRIVATE);
-		ipstation= settings.getString("ip_station", "192.168.80.6");
+		ipstation = settings.getString("ip_station", "192.168.80.6");
         portstationlocal = settings.getString("port_station_local", "1234");
 		portstationremote = settings.getString("port_station_remote", "1234");  
-		ipaccesspoint= settings.getString("ip_accesspoint", "192.168.1.4");
-        
+		ipaccesspoint = settings.getString("ip_accesspoint", "192.168.1.4");
+
 
 		txt1   = (TextView)findViewById(R.id.textViewultimocomando); 
-		
+
         btmute = (Button) findViewById(R.id.buttonmute);
 		//ArrayList loco= new ArrayList();
 		//loco.add(btmute.getText().toString());
 		//ArrayList = null;
-		ArrayList= new ArrayList<String>();
+		ArrayList = new ArrayList<String>();
 		ArrayList.add(btmute.getText().toString());
 		//Log.w("button", Integer.toString(btmute.getId()));
 		btpower = (Button) findViewById(R.id.buttonpower);
@@ -344,7 +318,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		ArrayList.add(bt2.getText().toString());
 		bt3 = (Button) findViewById(R.id.button3);
 		ArrayList.add(bt3.getText().toString());
-		
+
 		bt4 = (Button) findViewById(R.id.button4);
 		ArrayList.add(bt4.getText().toString());
 		bt5 = (Button) findViewById(R.id.button5);
@@ -391,10 +365,10 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		ArrayList.add(btaudio.getText().toString());
 		bttvcatv = (Button) findViewById(R.id.buttontvcatv);
 		ArrayList.add(bttvcatv.getText().toString());
-		
+
 		//new UDP_class().execute();
 		//textIn.setText("oncreate");
-  
+
 		bt1.setOnLongClickListener(new View.OnLongClickListener(){
 				public  boolean onLongClick(View v)
 				{
@@ -458,8 +432,8 @@ public class IrRemoteControlUDP extends ActionBarActivity
 					//task.execute(null);
 					//str="temp";
 					txt1.setText(bt1.getText().toString());
-					new UDP_class().execute(ipstation,portstationlocal,portstationremote,ipaccesspoint);
-Log.e("datos",portstationremote);
+					new UDP_class().execute(ipstation, portstationlocal, portstationremote, ipaccesspoint);
+					Log.e("datos", portstationremote);
 					/*	try
 					 {
 					 sendPacket(1235, "192.168.80.255", 1234, "qwerty");
