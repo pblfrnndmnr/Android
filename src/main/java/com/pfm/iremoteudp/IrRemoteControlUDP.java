@@ -365,9 +365,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		ArrayList.add(btaudio.getText().toString());
 		bttvcatv = (Button) findViewById(R.id.buttontvcatv);
 		ArrayList.add(bttvcatv.getText().toString());
-
-		//new UDP_class().execute();
-		//textIn.setText("oncreate");
+		
 
 		bt1.setOnLongClickListener(new View.OnLongClickListener(){
 				public  boolean onLongClick(View v)
@@ -383,19 +381,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		btmute.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 
-					// 	 str="test";
-					/*try {
-					 client();
-					 //txt1.setText(modifiedSentence);
-					 } catch (IOException e) {
-					 // TODO Auto-generated catch block
-					 e.printStackTrace();
-					 } */       	 	 
 					txt1.setText(btmute.getText().toString());
 					grabar(v);
 
@@ -404,19 +390,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
         btpower.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 
-					// 	 str="test";
-					/*try {
-					 client();
-					 //txt1.setText(modifiedSentence);
-					 } catch (IOException e) {
-					 // TODO Auto-generated catch block
-					 e.printStackTrace();
-					 } */       	 	 
 					txt1.setText(btpower.getText().toString());
 					recuperar(v);
 
@@ -426,26 +400,9 @@ public class IrRemoteControlUDP extends ActionBarActivity
         bt1.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
-					//str="temp";
 					txt1.setText(bt1.getText().toString());
 					new UDP_class().execute(ipstation, portstationlocal, portstationremote, ipaccesspoint);
 					Log.e("datos", portstationremote);
-					/*	try
-					 {
-					 sendPacket(1235, "192.168.80.255", 1234, "qwerty");
-					 //ccliente.main1();
-					 //txt1.setText(modifiedSentence);
-					 }
-					 catch (IOException e)
-					 {
-					 // TODO Auto-generated catch block
-					 txt1.setText(e.getMessage().toString());
-					 e.printStackTrace();
-					 }  */
 
 				}  
 
@@ -454,19 +411,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
         bt2.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
-
-					// 	 str="test";
-					/*try {
-					 client();
-					 //txt1.setText(modifiedSentence);
-					 } catch (IOException e) {
-					 // TODO Auto-generated catch block
-					 e.printStackTrace();
-					 } */       	 	 
 					txt1.setText(bt2.getText().toString());
 
 
@@ -476,29 +420,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
         bt3.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
-
-					// 	str="humi";
-					/*	try {
-					 client();
-					 //txt1.setText(modifiedSentence);
-					 } catch (IOException e) {
-					 // TODO Auto-generated catch block
-
-					 txt5.setText(e.getMessage().toString());
-					 e.printStackTrace();
-					 } */       	 	 
 					txt1.setText(bt3.getText().toString()); 
-
-					/*	String manufacturer = Build.MANUFACTURER;
-					 String model = Build.MODEL;
-					 int version = Build.VERSION.SDK_INT;
-					 String versionRelease = Build.VERSION.RELEASE;
-					 Toast.makeText(getApplicationContext(),model+ " "+ manufacturer, Toast.LENGTH_LONG).show();*/
-
 
 				}        	
 			}); 
@@ -506,10 +428,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		bt4.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(bt4.getText().toString());
 
 
@@ -519,10 +437,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
         bt5.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(bt5.getText().toString());
 
 
@@ -533,10 +447,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		bt6.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(bt6.getText().toString());
 
 
@@ -546,10 +456,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		bt7.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(bt7.getText().toString());
 
 
@@ -559,10 +465,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		bt8.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(bt8.getText().toString());
 
 
@@ -572,10 +474,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		bt9.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(bt9.getText().toString());
 
 
@@ -586,10 +484,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		bt0.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(bt0.getText().toString());
 
 
@@ -599,10 +493,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		bt100.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(bt100.getText().toString());
 
 
@@ -613,10 +503,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		bttvvideo.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(bttvvideo.getText().toString());
 
 
@@ -627,10 +513,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		btcanalanterior.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(btcanalanterior.getText().toString());
 
 
@@ -641,10 +523,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		btinfo.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(btinfo.getText().toString());
 
 
@@ -655,10 +533,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		bttimer.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(bttimer.getText().toString());
 
 
@@ -669,10 +543,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		btcanalup.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(btcanalup.getText().toString());
 
 
@@ -683,10 +553,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		btvoldown.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(btvoldown.getText().toString());
 
 
@@ -697,10 +563,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		btmenu.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
 					txt1.setText(btmenu.getText().toString());
 
 
@@ -711,10 +573,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		btvolup.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
+
 					txt1.setText(btvolup.getText().toString());
 
 
@@ -725,10 +584,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		btcanaldown.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
+
 					txt1.setText(btcanaldown.getText().toString());
 
 
@@ -739,10 +595,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		btimagen.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
+
 					txt1.setText(btimagen.getText().toString());
 
 
@@ -753,10 +606,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		btfuzzy.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
+
 					txt1.setText(btfuzzy.getText().toString());
 
 
@@ -767,10 +617,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		btmemoria.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
+
 					txt1.setText(btmemoria.getText().toString());
 
 
@@ -781,10 +628,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		btautoscan.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
+
 					txt1.setText(btautoscan.getText().toString());
 
 
@@ -795,10 +639,7 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		btaudio.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
+
 					txt1.setText(btaudio.getText().toString());
 
 
@@ -809,47 +650,13 @@ public class IrRemoteControlUDP extends ActionBarActivity
 		bttvcatv.setOnClickListener(new View.OnClickListener(){             
 				public void onClick(View v)
 				{                 
-					// Perform action on click 
-					//textIn.setText("test"); 
-					//txt2.setText("text2");
-					//task.execute(null);
-					txt1.setText(bttvcatv.getText().toString());
 
+					txt1.setText(bttvcatv.getText().toString());
 
 				}  
 
 			});
-
     }
 
-
-	/* public void client() throws IOException{
-
-
-	 DatagramSocket client_socket = new DatagramSocket(1234);
-	 InetAddress IPAddress =  InetAddress.getByName("localhost");   
-	 send_data = str.getBytes();
-	 //System.out.println("Type Something (q or Q to quit): ");             	
-	 DatagramPacket send_packet = new DatagramPacket(send_data,str.length(), IPAddress, 1234);	
-	 try{ 	
-	 client_socket.send(send_packet);                       
-
-	 //chandra 
-	 //DatagramPacket receivePacket = new DatagramPacket(receiveData, receiveData.length);
-	 //client_socket.receive(receivePacket);
-	 //   modifiedSentence = new String(receivePacket.getData());
-	 //System.out.println("FROM SERVER:" + modifiedSentence);
-	 if(modifiedSentence.charAt(2)=='%')
-	 txt5.setText(modifiedSentence.substring(0, 3)); 
-	 else
-	 txt1.setText(modifiedSentence);
-	 modifiedSentence=null;
-	 client_socket.close();    	 		  
-	 }
-	 catch(SocketException e){
-	 txt5.setText(e.getMessage().toString());
-	 e.printStackTrace();  
-	 }
-	 }   */         
 }
     
