@@ -232,7 +232,6 @@ public class IrRemoteControlUDP extends ActionBarActivity
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
-		//Alternativa 1
 		getMenuInflater().inflate(R.menu.activity_menu, menu);
 		return true;
 	}
